@@ -43,5 +43,9 @@ test:
   source_files:
     - tests
 
+  commands:
+    - cd tests && touch set_paths.py && nosetests  # [not win]
+    - cd tests && echo > set_paths.py && nosetests  # [win]
+
   imports:
     - fastfilters
